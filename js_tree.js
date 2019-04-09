@@ -5,8 +5,8 @@
    Tutorial 12
    Case Problem 3
 
-   Author: 
-   Date:   
+   Author: Ryan Burkhart
+   Date: 4/8/19  
 
    Filename: js_tree.js
 
@@ -36,6 +36,14 @@
       Returns true if tString represents the text of a white space text
       node and false if it doesn't
 */
+
+window.onload = maketree;
+
+var nodeCount = 0;
+var elemCount = 0;
+var textCount = 0;
+var wsCount = 0; 
+
 
 
 
