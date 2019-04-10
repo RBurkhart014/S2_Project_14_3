@@ -37,15 +37,37 @@
       node and false if it doesn't
 */
 
-window.onload = maketree;
+window.onload = makeTree;
 
 var nodeCount = 0;
 var elemCount = 0;
 var textCount = 0;
 var wsCount = 0; 
 
+function makeTree() {
+     var aside = document.createElement("aside");
+     aside.setAttribute("id", "treeBox");
+     var h1 = document.createElement("h1");
+     var hText = document.createTextNode("Node Tree");
+     h1.appendChild(hText);
+     aside.appendChild(h1);
+     document.getElementById("main").appendChild(aside);
 
+     var nodeList = document.createElement("ol");
+     aside.appendChild(nodeList);
 
+     var sourceArticle = document.querySelectorAll("#mainarticle");
+
+     makeBranches(sourceArticle, nodeList);
+}
+
+function makeBranches(treeNode, nestedList) {
+      nodeCount += 1;
+      var liElem = document.createElement("li");
+      var spanElem = document.createElement("span");
+      liElem.appendChild(spanElem);
+      nestedList.appendChild(liElem);
+}
 
 
 
